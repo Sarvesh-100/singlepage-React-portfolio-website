@@ -29,7 +29,7 @@ const handleSubmit = (event) => {
         <h1>Contact us</h1>
     </div>
     <form onSubmit={handleSubmit}>    
-      <label htmlFor="name">Name:</label>
+      <label htmlFor="name">Name</label>
       <input
         type="text"
         id="name"
@@ -39,7 +39,7 @@ const handleSubmit = (event) => {
         required
       />
       
-      <label htmlFor="email">Email:</label>
+      <label htmlFor="email">Email</label>
       <input
         type="email"
         id="email"
@@ -49,7 +49,7 @@ const handleSubmit = (event) => {
         required
       />
       
-      <label htmlFor="message">Message:</label>
+      <label htmlFor="message">Message</label>
       <textarea
         id="message"
         name="message"
@@ -58,7 +58,7 @@ const handleSubmit = (event) => {
         required
       />
       
-      <button type="submit" className='cv-btn' >Send</button>
+      <button type="submit" className='cv-btnn' >Send</button>
     </form>
     </>
   );

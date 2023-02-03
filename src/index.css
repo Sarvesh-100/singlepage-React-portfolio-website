@@ -99,8 +99,8 @@ nav .menu-btn,
 .name span {
   color: #d0ff00;
   border-bottom: 2px solid #d0ff00;
-  -webkit-animation: span 0.7s  ease-in both;
-	animation: span 0.7s  ease-in both;
+  -webkit-animation: span 0.7s ease-in both;
+  animation: span 0.7s ease-in both;
 }
 @-webkit-keyframes span {
   0% {
@@ -126,15 +126,6 @@ nav .menu-btn,
     opacity: 1;
   }
 }
-
-
-
-
-
-
-
-
-
 
 .name .details {
   color: #969696;
@@ -226,8 +217,12 @@ nav .menu-btn,
   animation: fade-in 1s ease-in;
 }
 @keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .f-heading p {
   color: rgba(247, 247, 247, 0.678);
@@ -240,6 +235,7 @@ nav .menu-btn,
   margin-top: 60px;
   margin-bottom: -120px;
 }
+/* Features css */
 #features {
   margin-top: 140px;
   width: 100%;
@@ -255,7 +251,7 @@ nav .menu-btn,
 
 .features-text {
   width: 45%;
-  color: #fff;
+  color: #ffff;
   list-style: circle;
 }
 .features-text h2 {
@@ -309,7 +305,7 @@ nav .menu-btn,
 .s-heading h1 {
   color: #ffffff;
   font-size: 3rem;
-  margin: 0px;
+  margin-bottom: 30px;
   padding: 0px;
 }
 .s-heading p {
@@ -323,7 +319,7 @@ nav .menu-btn,
   margin: 20px 0px;
 }
 .s-box {
-  background-color: #ffffff;
+  background-color: #1D2129;
   width: 350px;
   height: 470px;
   margin: 20px;
@@ -348,7 +344,7 @@ nav .menu-btn,
 .s-b-text {
   width: 100%;
   height: 40%;
-  background-color: #ffffff;
+  background-color: #1D2129;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -357,8 +353,8 @@ nav .menu-btn,
 }
 .s-b-text p {
   margin: 0px;
-  color: #000266a6;
-  font-size: 1.1rem;
+  color: white;
+  font-size: 2.1rem;
   font-family: calibri;
   display: block;
   display: -webkit-box;
@@ -370,7 +366,7 @@ nav .menu-btn,
   text-overflow: ellipsis;
 }
 .s-b-text p:hover {
-  color: #000266;
+  color: #d0ff00;
 }
 .s-b-text a {
   margin-top: 15px;
@@ -630,7 +626,7 @@ nav .menu-btn,
   }
 }
 
-#ContactUs {
+/* #ContactUs {
   display: center;
 }
 form {
@@ -672,6 +668,53 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: darkblue;
+} */
+
+/* Contact us css */
+#ContactUs {
+  display: center;
+}
+form {
+  width: 50%;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #1D2129;
+  border-radius: 10px;
+}
+input, textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.cv-btnn {
+  display: block;
+  margin: 0 auto;
+  background-color: #d0ff00;
+  color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  width: 50%;
+  } 
+.cv-btnn:hover {
+  background-color: #3e8e41;
 }
 
 @media (max-width: 768px) {
@@ -684,49 +727,176 @@ input[type="submit"]:hover {
   }
 }
 
-.skills {
+/* <-----------------------------skills----------------> */
+.skills_section {
+  width: 100%;
+  height: 100vh;
+  padding: 0px 13%;
+  background-color: rgba(0, 0, 0, 0.082);
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  padding: 2em 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-.head h2 {
-  font-size: 70px;
-  font-weight: 200px;
-  margin-right: 7rem;
+.skills_head {
+  width: 100%;
+  margin-bottom: 100px;
+  display: grid;
+  place-items: center;
+  text-align: center;
 }
-.skill {
-  flex: 0 0 calc(50% - 1em);
-  margin: 2em;
-  padding-right: 20px;
+.skills_head h2 {
+  font-size: 30px;
+  margin-bottom: -5px;
 }
-
-.h3 {
-  font-size: 1.2em;
-  margin: 0.5em 0;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+.skills_head h2 span {
   color: white;
-  text-align-last: justify;
+  font-size: 50px;
 }
-
-.skill-level {
-  height: 2em;
-  background-color: #d0ff00;
-  color: black;
-  text-align: right;
-  padding: 0.5em;
+@media (max-width: 768px) {
+.skills_head h2 span{
+      color:#d0ff00;
+    }
+  }
+.skills_main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 30px;
+  grid-column-gap: 50px;
 }
-
-@media (min-width: 900px) {
-  .skill {
-    flex: 0 0 calc(33.3333% - 1em);
+.skills_main .skill_bar .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+.skill_bar .info p {
+  color: white;
+  font-size:20px;
+  font:bold;
+  margin-bottom:8px;
+}
+@media (max-width: 700px) {
+.skill_bar .info p {
+    font-size:15px;
   }
 }
 
 
-
-
-
-
-
+.skill_bar .info p:nth-child(2) {
+  font-weight: 500;
+  color: white;
+  font:bold;
+}
+.skill_bar .bar {
+  width: 100%;
+  height: 10px;
+  background-color: white;
+  border-radius: 25px;
+  margin-top: 5px;
+  position: relative;
+}
+.skill_bar .bar span {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background-color: #d0ff00;
+  border-radius: 25px;
+}
+.skill_bar .bar .html {
+  width: 90%;
+  animation: html 2s;
+}
+@keyframes html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+.skill_bar .bar .css {
+  width: 85%;
+  animation: css 2s;
+}
+@keyframes css {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%;
+  }
+}
+.skill_bar .bar .sass {
+  width: 80%;
+  animation: sass 2s;
+}
+@keyframes sass {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+.skill_bar .bar .js {
+  width: 80%;
+  animation: css 2s;
+}
+@keyframes js {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+.skill_bar .bar .react {
+  width: 75%;
+  animation: react 2s;
+}
+@keyframes react {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+.skill_bar .bar .node {
+  width: 70%;
+  animation: node 2s;
+}
+@keyframes node {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+.skill_bar .bar .express {
+  width: 65%;
+  animation: express 2s;
+}
+@keyframes express {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 65%;
+  }
+}
+.skill_bar .bar .mongo {
+  width: 60%;
+  animation: mongo 2s;
+}
+@keyframes mongo {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}

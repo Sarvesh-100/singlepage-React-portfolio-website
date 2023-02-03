@@ -2,15 +2,18 @@ import React from 'react'
 
 const Box = (props) => {
   return (
-    <div className='s-box'>
+    <a href={props.link}>
+      <div className='s-box'>
         <div className='s-b-img'>
-            <img src={props.image} alt={props.alt}  />
+            <img src={props.image} alt={props.alt} smooth="true"  />
         </div>
         <div className='s-b-text'>
             <p>{props.text}</p>
-            <a href='#' className='cv-btn'>{props.button}</a>
+            <p style={{fontSize: '1.2em'}}>{props.description}</p>
+            {/* <a href='www.facebook.com' className='cv-btn'>{props.button}</a> */}
         </div>
-    </div>
+      </div>
+    </a>
   )
 }
 
